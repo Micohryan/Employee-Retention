@@ -2,9 +2,7 @@ import numpy as np
 import pandas as pd 
 import seaborn as sns
 import matplotlib.pyplot as plt
-import os
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -14,12 +12,11 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from xgboost import XGBClassifier
-from sklearn.metrics import accuracy_score,confusion_matrix,precision_score
+from sklearn.metrics import accuracy_score,precision_score
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import OrdinalEncoder
-from sklearn.preprocessing import LabelEncoder
-from sklearn.pipeline import Pipeline
+
 df= pd.read_csv("Employee.csv")
 print(df.isnull().sum())
 df.info()
