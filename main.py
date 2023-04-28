@@ -49,10 +49,6 @@ from sklearn.model_selection import train_test_split
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=2)
 
-
-from sklearn.preprocessing import LabelEncoder
-
-
 transformer = ColumnTransformer(transformers=[('ohe1', OneHotEncoder(sparse='False'), multi_categories),
                                              ('oe',OrdinalEncoder(categories=ordinal_cat),['Education','PaymentTier']),
                                              ('ohe2', OneHotEncoder(drop='first',sparse='False'), binary_cols)],remainder='passthrough')
